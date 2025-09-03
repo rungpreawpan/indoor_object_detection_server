@@ -45,8 +45,7 @@ const uploadOCR = [
 
 const receiveOCRResult = (req, res) => {
   latestOCRResult = {
-    ...req.body,
-    timestamp: new Date().toISOString(),
+    ...req.body
   };
   console.log('OCR Result received:', latestOCRResult);
   res.sendStatus(200);
